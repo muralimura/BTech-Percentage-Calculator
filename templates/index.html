@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>B.Tech Percentage Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>B.Tech Percentage Calculator</h1>
+
+        <div class="semester-selector">
+            <label for="sem-selector">Select Semester:</label>
+            <select id="sem-selector">
+                <option value="">Select</option>
+                {% for sem in range(1, 9) %}
+                <option value="{{ sem }}">Semester {{ sem }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div id="semesters-container"></div>
+
+        <button id="calculate-final" style="display:none;">Calculate Final Percentage</button>
+        <div id="final-result" class="result"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
